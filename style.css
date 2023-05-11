@@ -1,7 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
     user-select: none;
     font-family: 'Dosis', sans-serif;
 font-family: 'Inconsolata', monospace;
@@ -20,112 +19,282 @@ header{
     background-color: rgb(255, 0, 0);   
     width: 100px;
 }
-
 .piano{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    width: 300px;
-   top: 200px;
-   left: 570px;
-   border: 1px solid black;
+  display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: stretch;
+align-content: center;
+margin-top: 4%;
+}
+.white-key {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: px 3px 1px rgba(0, 0, 0, 0.25);
+  height: 30em;
+  width: 10em;
+  display: inline-block;
+  margin-right: -10px;
+  position: relative;
+  
+}
+
+.black-key {
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+  height: 15em;
+  width: 5em;
+  display: inline-block;
+  margin-right: -5em;
+  position: relative;
+  z-index: 1;
  
 }
-.white-key{
-    min-height: 250px;
-    min-width: 70px;
-    background-color: white;
-    margin: 1px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-align-content: center;
 
+
+span {
+  color: rgb(38, 102, 161);
+  font-size: 3em;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 60%);
+  z-index: 2;
 }
-.black-key{
-    height: 140px;
-    width: 40px;
-    background-color: rgb(0, 0, 0);
-    text-align: center;
-   position: absolute;
-   z-index: 1;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   color: white;
-   display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-align-content: center;
-}
+
+
+
+
 .number{
-    color: rgb(222, 45, 228);
-    margin-top: 10%;
-    font-style: bold;
-    font-size: large;
-   border-radius: 25%;
-    padding: 10%;
-    box-shadow: 0px 0px 0px 2px rgb(182, 182, 189);
+   color: rgb(206, 58, 181);
+    font-size: 2em;
+   font-weight: 600;
+    
+
     bottom: 0;
 }
-span{
-    font-weight: 900;
+
+hr{
+margin-top: 3%;
+margin-bottom: 3%;
 }
 
-#C {
-    left: 0;
+article{
+  text-align: center;
+  color: whitesmoke;
+  font-size: 3em;
+}
+
+
+@media screen and (max-width: 768px) {
+  header{
+    font-size: 1em;
+  }
+
+  h4, form{
+    display: none;
+  }
+
+  .piano{
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  margin-top: 4%;
+  }
+  .white-key {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: px 3px 1px rgba(0, 0, 0, 0.25);
+    height: 14em;
+    width: 4em;
+    display: inline-block;
+    margin-right: -0.5em;
+    position: relative;
+    
   }
   
-  #Cu {
-    left: 50px;
-    top: 0;
+  .black-key {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+    height:8em;
+    width: 2.3em;
+    display: inline-block;
+    margin-right: -2em;
+    position: relative;
+    z-index: 1;
+   
   }
   
-  #D {
-    left: 70px;
-  }
-  #Du{
-    left: 120px;
-    top: 0;
-  }
-  #E {
-    left: 140px;
-  }
-  #F{
-    left: 210px;
-  }
-  #Fu {
-    left: 260px;
-    top: 0;
+  
+  span {
+    
+    color: rgb(38, 102, 161);
+    font-size: 1.3em;
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 60%);
+    z-index: 2;
   }
   
-  #G {
-    left: 280px;
+  
+  
+  
+  .number{
+      display: none;
   }
-  #Gu{
-    left: 330px;
-    top: 0;
+  
+  hr, article{
+    display: none;
   }
-  #A {
-    left: 350px;
+
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header{
+    font-size: 1em;
   }
-  #Au{
-    left: 400px;
-    top: 0;
+
+  h4, form{
+    display: none;
   }
-  #H{
-    left: 420px;
+
+  .piano{
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  margin-top: 4%;
   }
-  #C2{
-    left: 490px;
+  .white-key {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: px 3px 1px rgba(0, 0, 0, 0.25);
+    height: 14em;
+    width: 4em;
+    display: inline-block;
+    margin-right: -0.5em;
+    position: relative;
+    
   }
+  
+  .black-key {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+    height:8em;
+    width: 2.3em;
+    display: inline-block;
+    margin-right: -2em;
+    position: relative;
+    z-index: 1;
+   
+  }
+  
+  
+  span {
+    
+    color: rgb(38, 102, 161);
+    font-size: 1.3em;
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 60%);
+    z-index: 2;
+  }
+  
+  
+  
+  
+  .number{
+      display: none;
+  }
+  
+  hr, article{
+    display: none;
+  }
+
+
+
+}
+
+@media screen and (min-width: 1025px) {
+  header{
+    font-size: 3em;
+  }
+
+ 
+  .piano{
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  margin-top: 2%;
+  }
+  .white-key {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: px 3px 1px rgba(0, 0, 0, 0.25);
+    height: 27em;
+    width: 10em;
+    display: inline-block;
+    margin-right: -0.5em;
+    position: relative;
+    
+  }
+  
+  .black-key {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25);
+    height:12em;
+    width: 5.3em;
+    display: inline-block;
+    margin-right: -5em;
+    position: relative;
+    z-index: 1;
+   
+  }
+  
+  
+  span {
+    
+    color: rgb(38, 102, 161);
+    font-size: 1.3em;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 60%);
+    z-index: 2;
+  }
+  
+  
+  
+  
+
+
+
+}
