@@ -1,123 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Inconsolata:wght@200&display=swap" rel="stylesheet">
-    <!-- <script src="script.js" defer></script> -->
-    <title>Simple Piano</title>
-  </head>
-  <body>
-    <header><h1>Piano</h1>
-        <h4>Volume</h4>
-        <form>
-            <input type="range" id="volume" min="0" max="1" step="0.01" value="0.2">
-        </form>
-</header>
-  
-    <main>  
-       
-      <div class="piano">
-        <div id="C" class="white-key">
-          <span>C</span>
-          <span class="number">1</span>
-          <audio id="cAudio">
-            <source src="audio/c.mp3" />
-          </audio>
-        </div>
-        <div id="Cu" class="black-key">
-          <span>C#</span>
-          <span class="number">Q</span>
-          <audio id="cuAudio">
-            <source src="audio/cu.mp3" />
-          </audio>
-        </div>
 
-        <div id="D" class="white-key">
-          <span>D</span>
-          <span class="number">2</span>
-          <audio id="dAudio">
-            <source src="audio/D.mp3" />
-          </audio>
-        </div>
-        <div id="Du" class="black-key">
-          <span>D#</span>
-          <span class="number">W</span>
-          <audio id="duAudio">
-            <source src="audio/du.mp3" />
-          </audio>
-        </div>
-        <div id="E" class="white-key">
-          <span>E</span>
-          <span class="number">3</span>
-          <audio id="eAudio">
-            <source src="audio/E.mp3" />
-          </audio>
-        </div>
-        <div id="F" class="white-key">
-          <span>F</span>
-          <span class="number">4</span>
-          <audio id="fAudio">
-            <source src="audio/F.mp3" />
-          </audio>
-        </div>
-        <div id="Fu" class="black-key">
-          <span>F#</span>
-          <span class="number">R</span>
-          <audio id="fuAudio">
-            <source src="audio/fu.mp3" />
-          </audio>
-        </div>
-        <div id="G" class="white-key">
-          <span>G</span>
-          <span class="number">5</span>
-          <audio id="gAudio">
-            <source src="audio/G.mp3" />
-          </audio>
-        </div>
-        <div id="Gu" class="black-key">
-          <span>G#</span>
-          <span class="number">T</span>
-          <audio id="guAudio">
-            <source src="audio/gu.mp3" />
-          </audio>
-        </div>
-        <div id="A" class="white-key">
-          <span>A</span>
-          <span class="number">6</span>
-          <audio id="aAudio">
-            <source src="audio/A.mp3" />
-          </audio>
-        </div>
-        <div id="Au" class="black-key">
-          <span>A#</span>
-          <span class="number">Y</span>
-          <audio id="auAudio">
-            <source src="audio/au.mp3" />
-          </audio>
-        </div>
-        <div id="H" class="white-key">
-          <span>H/B</span>
-          <span class="number">7</span>
-          <audio id="hAudio">
-            <source src="audio/H.mp3" />
-          </audio>
-        </div>
-        <div id="C2" class="white-key">
-          <span>C</span>
-          <span class="number">8</span>
-          <audio id="c2Audio">
-            <source src="audio/c2.mp3" />
-          </audio>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Inconsolata:wght@200&display=swap"
+    rel="stylesheet" />
+  <!-- <script src="script.js" defer></script> -->
+  <title>Simple Piano</title>
+</head>
+
+<body>
+  <header>
+    <h1>Piano</h1>
+    <h4>Volume</h4>
+    <form>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="0.2" />
+    </form>
+  </header>
+
+  <main>
+    <section class="piano">
+      <div id="C" class="white-key">
+        <span>C</span>
+        <span class="number">1</span>
+        <audio id="cAudio">
+          <source src="audio/c.mp3" />
+        </audio>
       </div>
-    </main>
-    <script src="script.js">
+      <div id="Cu" class="black-key">
+        <span>C#</span>
+        <span class="number">Q</span>
+        <audio id="cuAudio">
+          <source src="audio/cu.mp3" />
+        </audio>
+      </div>
 
-    </script>
-  </body>
+      <div id="D" class="white-key">
+        <span>D</span>
+        <span class="number">2</span>
+        <audio id="dAudio">
+          <source src="audio/D.mp3" />
+        </audio>
+      </div>
+      <div id="Du" class="black-key">
+        <span>D#</span>
+        <span class="number">W</span>
+        <audio id="duAudio">
+          <source src="audio/du.mp3" />
+        </audio>
+      </div>
+      <div id="E" class="white-key">
+        <span>E</span>
+        <span class="number">3</span>
+        <audio id="eAudio">
+          <source src="audio/E.mp3" />
+        </audio>
+      </div>
+      <div id="F" class="white-key">
+        <span>F</span>
+        <span class="number">4</span>
+        <audio id="fAudio">
+          <source src="audio/F.mp3" />
+        </audio>
+      </div>
+      <div id="Fu" class="black-key">
+        <span>F#</span>
+        <span class="number">R</span>
+        <audio id="fuAudio">
+          <source src="audio/fu.mp3" />
+        </audio>
+      </div>
+      <div id="G" class="white-key">
+        <span>G</span>
+        <span class="number">5</span>
+        <audio id="gAudio">
+          <source src="audio/G.mp3" />
+        </audio>
+      </div>
+      <div id="Gu" class="black-key">
+        <span>G#</span>
+        <span class="number">T</span>
+        <audio id="guAudio">
+          <source src="audio/gu.mp3" />
+        </audio>
+      </div>
+      <div id="A" class="white-key">
+        <span>A</span>
+        <span class="number">6</span>
+        <audio id="aAudio">
+          <source src="audio/A.mp3" />
+        </audio>
+      </div>
+      <div id="Au" class="black-key">
+        <span>A#</span>
+        <span class="number">Y</span>
+        <audio id="auAudio">
+          <source src="audio/au.mp3" />
+        </audio>
+      </div>
+      <div id="H" class="white-key">
+        <span>H/B</span>
+        <span class="number">7</span>
+        <audio id="hAudio">
+          <source src="audio/H.mp3" />
+        </audio>
+      </div>
+      <div id="C2" class="white-key">
+        <span>C</span>
+        <span class="number">8</span>
+        <audio id="c2Audio">
+          <source src="audio/c2.mp3" />
+        </audio>
+      </div>
+    </section>
+
+    <hr>
+
+  </main>
+<article>
+  <h1>How to play?</h1>
+<p>It is very easy. You can click on keys on display or click pink letters and numbers on your keyboard. Have fun ;)</p>
+</article>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
