@@ -145,4 +145,29 @@ for (const div of divs) {
     this.style.boxShadow = "";
   });
 }
+const orientationDiv = document.createElement('div');
+orientationDaiv.style.width = '100vw';
+orientationDiv.style.height = '100vh';
+orientationDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+orientationDiv.style.color = 'white';
+orientationDiv.style.fontSize = '2rem';
+orientationDiv.style.display = 'flex';
+orientationDiv.style.justifyContent = 'center';
+orientationDiv.style.alignItems = 'center';
+orientationDiv.style.position = 'fixed';
+orientationDiv.style.top = '0';
+orientationDiv.style.left = '0';
+orientationDiv.style.zIndex = '9999';
+orientationDiv.innerHTML = '<p>Plese turn phone over</p>';
+
+function handleOrientationChange() {
+  if (window.screen.orientation.type === 'portrait-primary' || window.screen.orientation.type === 'portrait-secondary') {
+    document.body.appendChild(orientationDiv);
+  } else {
+    document.body.removeChild(orientationDiv);
+  }
+}
+
+window.addEventListener('orientationchange', handleOrientationChange);
+
 
